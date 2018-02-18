@@ -16,7 +16,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+//    NSMutableArray *bindArray = [NSMutableArray arrayWithObjects:@(1), @(2), @(3), @(4), @(5), nil];
+//    NSArray *arr = [NSArray arrayFrom:1 To:3];
+//
+//    NSArray *res = [arr bind:^NSArray *(id obj) {
+//        return bindArray;
+//    }];
+//
+//    NSLog(@"%@", res);
+    
+//    NSArray *arr = [NSArray arrayFrom:1 To:3];
+//    NSArray *res = [arr zip:bindArray];
+//
+//    NSLog(@"%@", res);
+//
     return YES;
 }
 

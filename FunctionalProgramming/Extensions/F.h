@@ -28,7 +28,7 @@ typedef BOOL (^BoolDictionaryBlock)(id key, id value);
 typedef NSComparisonResult (^CompareArrayBlock) (id a, id b);
 typedef NSComparisonResult (^CompareDictBlock) (id k1, id v1 , id k2, id v2);
 
-typedef void (^VoidBlock) ();
+typedef void (^VoidBlock) (void);
 
 
 @interface F : NSObject
