@@ -13,6 +13,10 @@
 		5099C8E12039F670006A790B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5099C8E02039F670006A790B /* Assets.xcassets */; };
 		5099C8E42039F670006A790B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5099C8E22039F670006A790B /* LaunchScreen.storyboard */; };
 		5099C8E72039F670006A790B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5099C8E62039F670006A790B /* main.m */; };
+		5099C9022039FCBC006A790B /* NSArray+F.m in Sources */ = {isa = PBXBuildFile; fileRef = 5099C8FA2039FCBB006A790B /* NSArray+F.m */; };
+		5099C9032039FCBC006A790B /* NSDictionary+F.m in Sources */ = {isa = PBXBuildFile; fileRef = 5099C8FB2039FCBB006A790B /* NSDictionary+F.m */; };
+		5099C9042039FCBC006A790B /* NSNumber+F.m in Sources */ = {isa = PBXBuildFile; fileRef = 5099C8FE2039FCBB006A790B /* NSNumber+F.m */; };
+		5099C9052039FCBC006A790B /* F.m in Sources */ = {isa = PBXBuildFile; fileRef = 5099C8FF2039FCBC006A790B /* F.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,14 @@
 		5099C8E32039F670006A790B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5099C8E52039F670006A790B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5099C8E62039F670006A790B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5099C8FA2039FCBB006A790B /* NSArray+F.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+F.m"; path = "FunctionalProgramming/Extensions/NSArray+F.m"; sourceTree = SOURCE_ROOT; };
+		5099C8FB2039FCBB006A790B /* NSDictionary+F.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+F.m"; path = "FunctionalProgramming/Extensions/NSDictionary+F.m"; sourceTree = SOURCE_ROOT; };
+		5099C8FC2039FCBB006A790B /* NSNumber+F.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+F.h"; path = "FunctionalProgramming/Extensions/NSNumber+F.h"; sourceTree = SOURCE_ROOT; };
+		5099C8FD2039FCBB006A790B /* NSDictionary+F.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+F.h"; path = "FunctionalProgramming/Extensions/NSDictionary+F.h"; sourceTree = SOURCE_ROOT; };
+		5099C8FE2039FCBB006A790B /* NSNumber+F.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+F.m"; path = "FunctionalProgramming/Extensions/NSNumber+F.m"; sourceTree = SOURCE_ROOT; };
+		5099C8FF2039FCBC006A790B /* F.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = F.m; path = FunctionalProgramming/Extensions/F.m; sourceTree = SOURCE_ROOT; };
+		5099C9002039FCBC006A790B /* F.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = F.h; path = FunctionalProgramming/Extensions/F.h; sourceTree = SOURCE_ROOT; };
+		5099C9012039FCBC006A790B /* NSArray+F.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+F.h"; path = "FunctionalProgramming/Extensions/NSArray+F.h"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,7 @@
 				5099C8D82039F670006A790B /* AppDelegate.m */,
 				5099C8DA2039F670006A790B /* ViewController.h */,
 				5099C8DB2039F670006A790B /* ViewController.m */,
+				5099C8F92039FC51006A790B /* Extensions */,
 				5099C8DD2039F670006A790B /* Main.storyboard */,
 				5099C8E02039F670006A790B /* Assets.xcassets */,
 				5099C8E22039F670006A790B /* LaunchScreen.storyboard */,
@@ -69,6 +82,22 @@
 				5099C8E62039F670006A790B /* main.m */,
 			);
 			path = FunctionalProgramming;
+			sourceTree = "<group>";
+		};
+		5099C8F92039FC51006A790B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5099C9002039FCBC006A790B /* F.h */,
+				5099C8FF2039FCBC006A790B /* F.m */,
+				5099C9012039FCBC006A790B /* NSArray+F.h */,
+				5099C8FA2039FCBB006A790B /* NSArray+F.m */,
+				5099C8FD2039FCBB006A790B /* NSDictionary+F.h */,
+				5099C8FB2039FCBB006A790B /* NSDictionary+F.m */,
+				5099C8FC2039FCBB006A790B /* NSNumber+F.h */,
+				5099C8FE2039FCBB006A790B /* NSNumber+F.m */,
+			);
+			name = Extensions;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +172,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5099C8DC2039F670006A790B /* ViewController.m in Sources */,
+				5099C9052039FCBC006A790B /* F.m in Sources */,
+				5099C9032039FCBC006A790B /* NSDictionary+F.m in Sources */,
 				5099C8E72039F670006A790B /* main.m in Sources */,
 				5099C8D92039F670006A790B /* AppDelegate.m in Sources */,
+				5099C9042039FCBC006A790B /* NSNumber+F.m in Sources */,
+				5099C9022039FCBC006A790B /* NSArray+F.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
