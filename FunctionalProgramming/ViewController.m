@@ -94,8 +94,8 @@
         return isEven;
     };
     
-    //    NSLog(@"\nAll: Array - %@, Dict - %@", [numberArray isValidForAll:isEvenArrayBlock] , [numberDict isValidForAll:isEvenDictBlock]);
-    //    NSLog(@"\nAny: Array - %@, Dict - %@", [numberArray isValidForAny:isEvenArrayBlock], [numberDict isValidForAny:isEvenDictBlock]);
+        NSLog(@"\nAll: Array - %d, Dict - %d", [numberArray isValidForAll:isEvenArrayBlock] , [numberDict isValidForAll:isEvenDictBlock]);
+        NSLog(@"\nAny: Array - %d, Dict - %d", [numberArray isValidForAny:isEvenArrayBlock], [numberDict isValidForAny:isEvenDictBlock]);
     
     NSNumber *countEvenArray = [numberArray countValidEntries:isEvenArrayBlock];
     NSNumber *countEvenDict = [numberDict countValidEntries:isEvenDictBlock];
@@ -120,7 +120,7 @@
     
     //group
     
-    NSArray *oddEvenArr = [numberArray group:^NSString *(NSNumber *obj) {
+    NSDictionary *oddEvenArr = [numberArray group:^NSString *(NSNumber *obj) {
         if (([obj intValue] % 2) == 0) {
             return @"even";
         } else {
@@ -129,6 +129,7 @@
     }];
     
     NSLog(@"%@", oddEvenArr);
+    NSLog(@"%@", [oddEvenArr valueForKey:@"even"][1]);
     
     //times
     
@@ -140,7 +141,7 @@
     
     //flattern
     
-    NSArray *arrWithArrays = @[@[@1,@2,@3], @[@4,@5,@6]];
+    NSArray *arrWithArrays = @[@[@1,@3,@2], @[@4,@5,@6]];
     NSArray *flatternArr = [arrWithArrays flatten];
     
     NSLog(@"FlatternArr = %@", flatternArr);
@@ -152,14 +153,18 @@
     
     NSLog(@"Before 3: %@, after: %@", untilThree, afterThree);
     
+    /// bind: Возвращает столько раз numberArray, сколько объектов в arrWithArrays
+    
     NSArray *bindArray = [arrWithArrays bind:^NSArray *(id obj) {
-        return obj;
+        return numberArray;
     }];
     
-    NSLog(@"%@", bindArray);
+    NSLog(@"===>>%@", bindArray);
     
     NSArray *zipArr = [numberArray zip:flatternArr];
     NSLog(@"%@", zipArr);
+    NSLog(@"%@", zipArr[1][1]);
+    
 }
 
 
